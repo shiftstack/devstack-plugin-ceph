@@ -27,6 +27,8 @@ set +o xtrace
 # Defaults
 # --------
 
+SERVICE_HOST=${CEPH_IP_ADDRESS:-${SERVICE_HOST}}
+
 CEPH_RELEASE=${CEPH_RELEASE:-hammer}
 
 # Deploy a Ceph demo container instead of a non-containerized version
