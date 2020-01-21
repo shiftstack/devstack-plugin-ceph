@@ -436,6 +436,7 @@ function configure_ceph {
     iniset -sudo ${CEPH_CONF_FILE} global "fsid" "${CEPH_FSID}"
     iniset -sudo ${CEPH_CONF_FILE} global "mon_initial_members" "$(hostname)"
     iniset -sudo ${CEPH_CONF_FILE} global "mon_host" "${SERVICE_HOST}"
+    iniset -sudo ${CEPH_CONF_FILE} global "public_addr" "${SERVICE_HOST}"
     iniset -sudo ${CEPH_CONF_FILE} global "auth_cluster_required" "cephx"
     iniset -sudo ${CEPH_CONF_FILE} global "auth_service_required" "cephx"
     iniset -sudo ${CEPH_CONF_FILE} global "auth_client_required" "cephx"
